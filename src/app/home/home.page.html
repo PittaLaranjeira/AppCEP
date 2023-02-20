@@ -14,13 +14,22 @@
         <ion-input name="cep" ngModel></ion-input>
       </ion-item>
       <ion-button expand="block" (click)="buscar(form)">Buscar</ion-button>
+      <ion-item>
+        <ion-label position="floating">Logradouro</ion-label>
+        <ion-input disabled value="{{endereco.logradouro}}" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Bairro</ion-label>
+        <ion-input disabled value="{{endereco.bairro}}" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Localidade</ion-label>
+        <ion-input disabled value="{{endereco.localidade}}" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">UF</ion-label>
+        <ion-input disabled value="{{endereco.uf}}" ngModel></ion-input>
+      </ion-item>
     </form>
-
-    <ion-card>
-      <p>{{endereco.logradouro}}</p>
-      <p>{{endereco.bairro}}</p>
-      <p>{{endereco.localidade}}</p>
-      <p>{{endereco.uf}}</p>
-    </ion-card>
   </div>
 </ion-content>

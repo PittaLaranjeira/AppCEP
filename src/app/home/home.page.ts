@@ -19,6 +19,7 @@ export class HomePage {
       }).then((dadosRetornados) => {
         console.log(dadosRetornados)
         this.endereco = { ...dadosRetornados }
+        console.log(this.endereco);
       })
   }
 }

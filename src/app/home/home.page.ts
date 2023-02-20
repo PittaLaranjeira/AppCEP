@@ -13,7 +13,7 @@ export class HomePage {
 
   buscar(formu) {
     let cep = formu.value.cep;
-    fetch("http://viacep.com.br/ws/" + cep + "/json")
+    fetch("http://viacep.com.br/ws/"+cep+"/json")
       .then(function (dados) {
         return dados.json()
       }).then((dadosRetornados) => {

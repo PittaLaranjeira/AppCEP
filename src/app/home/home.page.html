@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Buscar CEP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="ion-padding">
+    <form #form="ngForm">
+      <ion-item>
+        <ion-label position="floating">Digite o CEP</ion-label>
+        <ion-input name="cep" ngModel></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="buscar(form)">Buscar</ion-button>
+    </form>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card>
+      <p>{{endereco.logradouro}}</p>
+      <p>{{endereco.bairro}}</p>
+      <p>{{endereco.localidade}}</p>
+      <p>{{endereco.uf}}</p>
+    </ion-card>
   </div>
 </ion-content>

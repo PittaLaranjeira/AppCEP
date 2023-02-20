@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() { }
 
+  endereco = {}
+
+  buscar(formu) {
+    let cep = formu.value.cep;
+    fetch("http://viacep.com.br/ws/" + cep + "/json")
+      .then(function (dados) {
+        return dados.json()
+      }).then((dadosRetornados) => {
+        console.log(dadosRetornados)
+        this.endereco = { ...dadosRetornados }
+      })
+  }
 }
